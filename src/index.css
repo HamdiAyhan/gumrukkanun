@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  padding: 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +10,34 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.disappear {
+  opacity: 0;
+  transform: translateX(-100px);
+  pointer-events: none;
+}
+.secim {
+  position: fixed;
+  top:100px;
+  margin-left: 500px;
+  transform: translateX(-50%);
+  z-index: 1000; /* Butonun diğer içeriklerin üstünde görünmesini sağlamak için yüksek bir z-index değeri belirleyin */
+  background-color: yellow; /* Butonun arka planını belirginleştirmek için renk ekleyin */
+  padding: 10px 20px; /* Butona biraz iç boşluk ekleyin */
+  border-radius: 5px; /* Butonun köşelerini yuvarlatın */
 }
